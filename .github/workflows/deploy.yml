@@ -17,6 +17,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           envs: PASS
           script: |
-            cd /home/codabool/mongoCaffine
+            cd /home/codabool/mongo-caffine
             git pull
             echo "hi" > test.file
