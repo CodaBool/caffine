@@ -1,0 +1,22 @@
+name: mongo-caffine
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    if: "! contains(github.event.commits[0].message, '[no ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Have Server pull latest
+        uses: appleboy/ssh-action@master
+        env: 
+          PASS: ${{ secrets.PASSWORD }}
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          envs: PASS
+          script: |
+            cd /home/codabool/mongoCaffine
+            git pull
+            echo "hi" > test.file
