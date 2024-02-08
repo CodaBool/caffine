@@ -1,7 +1,7 @@
 require('dotenv').config()
 const pgp = require('pg-promise')();
 const dbGen = pgp(process.env.PG_URI_GEN)
-const dbDek = pgp(process.env.PG_URI_DEK)
+//const dbDek = pgp(process.env.PG_URI_DEK)
 
 async function read(db, project) {
   const res = await db.any(`SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'`)
@@ -16,9 +16,9 @@ async function write(db, project) {
 }
 
 read(dbGen, 'general')
-read(dbDek, 'deck')
+//read(dbDek, 'deck')
 
 write(dbGen, 'general')
-write(dbDek, 'deck')
+//write(dbDek, 'deck')
 
 pgp.end()
