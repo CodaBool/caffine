@@ -8,6 +8,7 @@ async function read(uri, dbName, collName) {
   }
   const client = new MongoClient(uri)
   try {
+    console.log("connecting to", dbName, collName)
     await client.connect()
     const db = client.db(dbName)
     const collection = db.collection(collName)
@@ -21,6 +22,8 @@ async function read(uri, dbName, collName) {
 }
 
 read(process.env.MONGO_URI_STAT_CODADASH_COM, 'myFirstDatabase', 'statements')
-read(process.env.MONGO_URI_TYPE_RACER, 'game', 'games')
-read(process.env.MONGO_URI_TYPE_RACER, 'scrape', 'upcoming-movies')
+// always get bad creds on this, despite being exactly what the server is using
+// and the db is open to all IPs
+//read(process.env.MONGO_URI_TYPE_RACER, 'game', 'games')
+//read(process.env.MONGO_URI_TYPE_RACER, 'scrape', 'upcoming-movies')
 read(process.env.MONGO_URI_MARKET, 'market', 'accounts')
