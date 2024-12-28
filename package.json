@@ -4,16 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node mongoCaffine.js",
-    "supa": "node supaCaffine.js",
-    "mongo": "node mongoCaffine.js"
+    "supa": "node --env-file=.env supaCaffine.js",
+    "mongo": "node --env-file=.env mongoCaffine.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "mongodb": "^4.10.0",
-    "pg-promise": "^10.12.0"
+    "mongodb": "^6.12.0",
+    "pg-promise": "^11.10.2"
   }
 }

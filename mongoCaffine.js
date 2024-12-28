@@ -1,4 +1,3 @@
-require('dotenv').config()
 const { MongoClient } = require('mongodb')
 
 async function read(uri, dbName, collName) {
@@ -21,9 +20,9 @@ async function read(uri, dbName, collName) {
   }
 }
 
-read(process.env.MONGO_URI_STAT_CODADASH_COM, 'myFirstDatabase', 'statements')
+//read(process.env.MONGO_URI_STAT_CODADASH_COM, 'myFirstDatabase', 'statements')
 // always get bad creds on this, despite being exactly what the server is using
 // and the db is open to all IPs
-//read(process.env.MONGO_URI_TYPE_RACER, 'game', 'games')
+read(process.env.MONGO_URI_TYPE_RACER, 'game', 'games')
 //read(process.env.MONGO_URI_TYPE_RACER, 'scrape', 'upcoming-movies')
 read(process.env.MONGO_URI_MARKET, 'market', 'accounts')

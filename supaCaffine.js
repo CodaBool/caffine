@@ -1,4 +1,3 @@
-require('dotenv').config()
 const pgp = require('pg-promise')();
 const dbGen = pgp(process.env.PG_URI_GEN)
 const dbMap = pgp(process.env.PG_URI_MAP)
