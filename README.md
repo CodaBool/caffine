@@ -1,6 +1,13 @@
-## ☕
-MongoDB free clusters requires at least one read connection about every month.
-This node script connects to my less active dbs and prevents sleeping.
+## ☕ Caffine
+Caffine keeps a service which would normally go into hibernate awake
 
-# Supa Caffine
-I am switching most of my DBs over to SupaBase since Heroku free tier is ending.
+> Written in node
+
+### MongoDB
+MongoDB free clusters requires at least one read connection about every month
+
+### Supabase
+Supabase offers a fantastic service of pooled PostgreSQL DBs
+
+### Automated
+This is ran on a cron in a GitHub Action
