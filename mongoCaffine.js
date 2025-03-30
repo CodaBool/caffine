@@ -26,3 +26,4 @@ async function read(uri, dbName, collName) {
 read(process.env.MONGO_URI_TYPE_RACER, 'game', 'games')
 //read(process.env.MONGO_URI_TYPE_RACER, 'scrape', 'upcoming-movies')
 read(process.env.MONGO_URI_MARKET, 'market', 'accounts')
+read(process.env.MONGO_URI_MONEY, 'myFirstDatabase', 'users')
