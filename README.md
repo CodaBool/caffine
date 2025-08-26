@@ -10,4 +10,4 @@ MongoDB free clusters requires at least one read connection about every month
 Supabase offers a fantastic service of pooled PostgreSQL DBs
 
 ### Automated
-This is ran on a cron in a GitHub Action
+This is ran on a cron in a GitHub Action 
