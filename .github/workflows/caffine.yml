@@ -13,9 +13,9 @@ jobs:
 
     steps:
       # https://github.com/marketplace/actions/checkout
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       # https://github.com/marketplace/actions/setup-node-js-environment
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
 
       - name: Install dependencies
         run: npm install
@@ -24,6 +24,7 @@ jobs:
         run: |
           echo "MONGO_URI_TYPE_RACER=${{ secrets.MONGO_URI_TYPE_RACER }}" >> .env
           echo "MONGO_URI_MARKET=${{ secrets.MONGO_URI_MARKET }}" >> .env
+          echo "MONGO_URI_MONEY=${{ secrets.MONGO_URI_MONEY }}" >> .env
           echo "PG_URI_GEN=${{ secrets.PG_URI_GEN }}" >> .env
           echo "PG_URI_MAP=${{ secrets.PG_URI_MAP }}" >> .env
 
