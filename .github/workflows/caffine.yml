@@ -35,5 +35,5 @@ jobs:
 
       - name: Perform curl requests
         run: |
-          curl "https://typer.onrender.com/socket.io/?EIO=4&transport=polling"
+          curl 'https://typer.onrender.com/socket.io/?EIO=4&transport=polling'
           curl "https://analytics.codabool.workers.dev/?secret=${{ secrets.ANALYTICS_SECRET }}"
