@@ -8,7 +8,7 @@
     "mongo": "node --env-file=.env mongoCaffine.js"
   },
   "dependencies": {
-    "mongodb": "^6.12.0",
-    "pg-promise": "^11.10.2"
+    "mongodb": "^7.2.0",
+    "pg-promise": "^12.6.2"
   }
 }
