@@ -27,6 +27,7 @@ jobs:
           echo "MONGO_URI_MONEY=${{ secrets.MONGO_URI_MONEY }}" >> .env
           echo "PG_URI_GEN=${{ secrets.PG_URI_GEN }}" >> .env
           echo "PG_URI_MAP=${{ secrets.PG_URI_MAP }}" >> .env
+          echo "PG_URI_BRANDON=${{ secrets.PG_URI_BRANDON }}" >> .env
 
       - name: Run npm commands
         run: |
